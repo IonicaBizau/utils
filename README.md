@@ -7,6 +7,7 @@ Useful JavaScript functions.
 
 ```js
 function eachFooDelay () {
+
   var args  = [].splice.call(arguments,0)
     , l = args.length
     , delay = Number(args[l - 1])
@@ -32,5 +33,5 @@ eachFooDelay(
   , function () {console.log(3)} 
   , function () {console.log(4)}
   , 1000
-) 
+)
 ```
