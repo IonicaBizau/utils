@@ -46,3 +46,52 @@ function queryString (name) {
     return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 ```
+
+## Convert
+
+Convert the following structure:
+
+```sh
+$ tree
+.
+├── 1.html
+├── 2.html
+└── 3.html
+
+0 directories, 3 files
+```
+
+into:
+
+```sh
+ tree
+.
+├── 1
+│   ├── de.html
+│   ├── fr.html
+│   └── it.html
+├── 2
+│   ├── de.html
+│   ├── fr.html
+│   └── it.html
+└── 3
+    ├── de.html
+    ├── fr.html
+    └── it.html
+
+3 directories, 9 files
+```
+
+Code:
+
+```sh
+for file in *.html; do
+    echo "Copying $file"
+    NAME=`node -pe 'f = process.argv[1]; f.substring(0, f.indexOf("."))' $file`
+    mkdir $NAME
+    cp $file $NAME/de.html
+    cp $file $NAME/fr.html
+    cp $file $NAME/it.html
+    rm $file;
+done
+```
