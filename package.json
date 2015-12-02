@@ -1,0 +1,150 @@
+{
+  "name": "johnnys-utils",
+  "version": "1.0.0",
+  "description": "Useful JavaScript functions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IonicaBizau/utils.git"
+  },
+  "keywords": [
+    "utils",
+    "functions"
+  ],
+  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/utils/issues"
+  },
+  "homepage": "https://github.com/IonicaBizau/utils#readme",
+  "blah": {
+    "description": [
+      {
+        "h2": "`eachFooWithDelay`"
+      },
+      {
+        "code": {
+          "language": "js",
+          "content": [
+            "function eachFooDelay () {",
+            "  var args  = [].splice.call(arguments,0)",
+            "    , l = args.length",
+            "    , delay = Number(args[l - 1])",
+            "    , i = -1",
+            "    ;",
+            "",
+            "  var interval = setInterval(function () {",
+            "    if (typeof args[++i] === \"function\") {",
+            "      args[i]();",
+            "    } else {",
+            "      clearInterval(interval);",
+            "    }",
+            "  }, delay)",
+            "}"
+          ]
+        }
+      },
+      {
+        "h3": "Example"
+      },
+      {
+        "code": {
+          "language": "js",
+          "content": [
+            "eachFooDelay(",
+            "    function () {console.log(1)}",
+            "  , function () {console.log(2)}",
+            "  , function () {console.log(3)}",
+            "  , function () {console.log(4)}",
+            "  , 1000",
+            ")"
+          ]
+        }
+      },
+      {
+        "h2": "[`queryString`](http://stackoverflow.com/a/901144/1420197)"
+      },
+      {
+        "code": {
+          "language": "js",
+          "content": [
+            "function queryString (name) {",
+            "    name = name.replace(/[\\[]/, \"\\[\").replace(/[\\]]/, \"\\]\");",
+            "    var regex = new RegExp(\"[\\?&]\" + name + \"=([^&#]*)\"),",
+            "        results = regex.exec(location.search);",
+            "    return results == null ? \"\" : decodeURIComponent(results[1].replace(/\\+/g, \" \"));",
+            "}"
+          ]
+        }
+      },
+      {
+        "h2": "Convert"
+      },
+      {
+        "p": "Convert the following structure:"
+      },
+      {
+        "code": {
+          "language": "sh",
+          "content": [
+            "$ tree",
+            ".",
+            "├── 1.html",
+            "├── 2.html",
+            "└── 3.html",
+            "",
+            "0 directories, 3 files"
+          ]
+        }
+      },
+      {
+        "p": "into:"
+      },
+      {
+        "code": {
+          "language": "sh",
+          "content": [
+            " tree",
+            ".",
+            "├── 1",
+            "│   ├── de.html",
+            "│   ├── fr.html",
+            "│   └── it.html",
+            "├── 2",
+            "│   ├── de.html",
+            "│   ├── fr.html",
+            "│   └── it.html",
+            "└── 3",
+            "    ├── de.html",
+            "    ├── fr.html",
+            "    └── it.html",
+            "",
+            "3 directories, 9 files"
+          ]
+        }
+      },
+      {
+        "p": "Code:"
+      },
+      {
+        "code": {
+          "language": "sh",
+          "content": [
+            "for file in *.html; do",
+            "    echo \"Copying $file\"",
+            "    NAME=`node -pe 'f = process.argv[1]; f.substring(0, f.indexOf(\".\"))' $file`",
+            "    mkdir $NAME",
+            "    cp $file $NAME/de.html",
+            "    cp $file $NAME/fr.html",
+            "    cp $file $NAME/it.html",
+            "    rm $file;",
+            "done"
+          ]
+        }
+      }
+    ]
+  }
+}
