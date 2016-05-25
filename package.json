@@ -1,8 +1,8 @@
 {
   "name": "johnnys-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Useful JavaScript functions.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -146,5 +146,17 @@
         }
       }
     ]
-  }
+  },
+  "files": [
+    "bin/",
+    "app/",
+    "lib/",
+    "dist/",
+    "src/",
+    "resources/",
+    "menu/",
+    "scripts/",
+    "cli.js",
+    "index.js"
+  ]
 }
