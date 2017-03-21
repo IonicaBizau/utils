@@ -1,6 +1,6 @@
 {
   "name": "johnnys-utils",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Useful JavaScript functions.",
   "main": "lib/index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "utils",
     "functions"
   ],
-  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "author": "Ionică Bizău <bizauionica@gmail.com> (https://ionicabizau.net)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/IonicaBizau/utils/issues"
@@ -151,12 +151,11 @@
     "bin/",
     "app/",
     "lib/",
-    "build/",
     "dist/",
     "src/",
+    "scripts/",
     "resources/",
     "menu/",
-    "scripts/",
     "cli.js",
     "index.js"
   ]
