@@ -8,6 +8,7 @@
 > Useful JavaScript functions.
 
 ## `eachFooWithDelay`
+
 ```js
 function eachFooDelay () {
   var args  = [].splice.call(arguments,0)
@@ -25,7 +26,9 @@ function eachFooDelay () {
   }, delay)
 }
 ```
+
 ### Example
+
 ```js
 eachFooDelay(
     function () {console.log(1)}
@@ -35,7 +38,9 @@ eachFooDelay(
   , 1000
 )
 ```
+
 ## [`queryString`](http://stackoverflow.com/a/901144/1420197)
+
 ```js
 function queryString (name) {
     name = name.replace(/[\[]/, "\[").replace(/[\]]/, "\]");
@@ -44,7 +49,9 @@ function queryString (name) {
     return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 ```
+
 ## Convert
+
 
 Convert the following structure:
 
@@ -57,6 +64,7 @@ $ tree
 
 0 directories, 3 files
 ```
+
 
 into:
 
@@ -79,6 +87,7 @@ into:
 3 directories, 9 files
 ```
 
+
 Code:
 
 ```sh
@@ -92,6 +101,7 @@ for file in *.html; do
     rm $file;
 done
 ```
+
 
 ## :yum: How to contribute
 Have an idea? Found a bug? See [how to contribute][contributing].
