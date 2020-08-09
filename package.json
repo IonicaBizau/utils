@@ -1,6 +1,6 @@
 {
   "name": "johnnys-utils",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Useful JavaScript functions.",
   "main": "lib/index.js",
   "scripts": {
