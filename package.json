@@ -1,6 +1,6 @@
 {
   "name": "johnnys-utils",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Useful JavaScript functions.",
   "main": "lib/index.js",
   "scripts": {
@@ -158,6 +158,8 @@
     "menu/",
     "cli.js",
     "index.js",
+    "index.d.ts",
+    "package-lock.json",
     "bloggify.js",
     "bloggify.json",
     "bloggify/"
